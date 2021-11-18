@@ -2,6 +2,7 @@ from GA import GAlgorthim
 from graph import draw_graph
 from readdata import load_data
 import time
+import numpy as np
 from tkinter import *
 from tkinter import ttk
 from tkinter import filedialog
@@ -10,7 +11,7 @@ root= Tk()
 #set the title of the window
 root.title("GCP")
 #set the icon of the window
-root.iconbitmap("Img/kubsu.ico")
+#root.iconbitmap("Img/kubsu.ico")
 #set the dimensions of the window
 root.geometry("1100x600")
 #fixed size of window
@@ -70,7 +71,7 @@ combo_method_algorthim = ttk.Combobox(root, values=["custom","random"], state="r
 combo_method_algorthim.current(0)
 combo_method_algorthim.grid(row=8, column=1)
 #select a file
-path='graph.txt'
+path='ali.txt'
 def select_file():
     global path
     path = filedialog.askopenfilename(initialdir = "/",title = "Open file",filetypes = (("txt files","*.txt"),("all files","*.*")))
